@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac-Book-Pro</title>
+    <!-- Tailwindcss and Fonts -->
+    <link rel="stylesheet" href="stylesheets/tailwind.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet" />
+    <!-- Custom styling -->
+    <style>
+        body {
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .selected {
+            border: 1px solid purple;
+            background-color: gray;
+            color: white;
+        }
+
+        table {
+            width: 70%;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container mx-auto px-4 md:px-2">
+            <div class="grid grid-cols-2">
+                <!-- Image -->
+                <div class="p-5 rounded border-gray-200 m-5">
+                    <div class="h-100 w-full">
+                        <img src="images/mac.png" class="w-full rounded h-full object-cover" alt="" />
+                    </div>
+                </div>
+                <!-- Options -->
+                <div class="mt-8 max-w-lg mx-auto">
+                    <h1 class="text-4xl text-gray-700 mb-4">Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
+                    <span class="text-lg text-gray-700">Apple M1 chip with 8-core CPU with 4 performance cores and 4
+                        efficiency cores, 7-core GPU, and 16-core Neural Engine
+                    </span>
+                    <div class="pt-10">
+                        <p>Memory</p>
+                        <button
+                            class=" p-2 border border-gray-200 shadow hover:bg-gray-400 hover:text-white hover:text-white hover:text-white rounded "
+                            id="memory-8GB">
+                            8GB unifield memory
+                        </button>
+                        <button id="memory-16GB"
+                            class=" p-2 border border-gray-200 shadow hover:bg-gray-400 hover:text-white hover:text-white hover:text-white rounded ">
+                            16GB unifield memory
+                        </button>
+                    </div>
+                    <div class="pt-10">
+                        <p>Storage</p>
+                        <button
+                            class=" p-2 border border-gray-200 shadow hover:bg-gray-400 hover:text-white hover:text-white hover:text-white rounded "
+                            id="storage-8GB">
+                            8GB SSD storage
+                        </button>
+                        <button id="storage-512GB"
+                            class=" p-2 border border-gray-200 shadow hover:bg-gray-400 hover:text-white hover:text-white hover:text-white rounded ">
+                            512GB SSD storage
+                        </button>
+                        <button id="storage-1TR"
+                            class=" p-2 border border-gray-200 shadow hover:bg-gray-400 hover:text-white rounded ">
+                            1TB SSD storage
+                        </button>
+                    </div>
+                    <div class="pt-10 pb-10">
+                        <p>Choose your delivery option</p>
+                        <button class=" p-2 border border-gray-200 shadow hover:bg-gray-400 hover:text-white rounded "
+                            id="free">
+                            Friday,Aug 25 FREE Prime Delivery
+                        </button>
+                        <button id="paid"
+                            class=" p-2 border border-gray-200 shadow hover:bg-gray-400 hover:text-white rounded ">
+                            Friday,Aug 21 Delivery charge $20
+                        </button>
+                        <div class="pt-10 pb-10">
+                            <table class="border-separate">
+                                <tbody>
+                                    <tr>
+                                        <td class="border-b-2">Best Price</th>
+                                        <td class="border-b-2">$<span id="best-price">1299</span></th>
+                                    </tr>
+                                    <tr>
+                                        <td class="border-b-2">Extra Memory Cost</td>
+                                        <td class="border-b-2">$<span id="memoey-cost">0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border-b-2">Extra Storage Cost</td>
+                                        <td class="border-b-2">$<span id="storage-cost">0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border-b-2 border-gray-500 border-opacity-100">Delivery Charge
+                                        </td>
+                                        <td class="border-b-2 border-gray-500 border-opacity-100">$<span
+                                                id="delivery-cost">0</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border-b-2">Total Price</td>
+                                        <td class="border-b-2">$<span id="total-cost">1299</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="pt-10">
+                                <p>Add Pomo Code</p>
+                                <input class=" p-2 border border-gray-200 shadow rounded " type="text" name=""
+                                    id="pomo_input">
+                                <button id="pomo-btn" class="p-2 border border-gray-400 shadow bg-red-500 rounded">
+                                    Apply
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="text-4xl py-2 text-center mb-10">Total: $<span id="grand-total">1299</span></div>
+    </main>
+    <!-- Custom js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
